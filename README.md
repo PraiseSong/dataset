@@ -9,12 +9,12 @@ dataSet
 <h2>Usage</h2>
 <h5>HTML: Turn this</h5>
 <pre>
-<section data-type="username" 
+&lt;section data-type="username" 
          data-age="23" 
          data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
          data-vip="true" data-email="null"
->
-</section>
+&gt;
+&lt;/section&gt;
 </pre>
 
 <h5>Data: You want into this</h5>
