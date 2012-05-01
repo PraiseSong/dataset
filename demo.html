@@ -10,9 +10,13 @@
 	<title>dataSet util's demo</title>
 	<script type="text/javascript" src="dataset.js"></script>
 	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+		}
 		.dataset-box{
 			margin:0 auto;
-			width:900px;
+			width:50%;
 		}
 		.t-pos-center{
 			text-align:center;
@@ -50,16 +54,54 @@
 			padding:10px;
 			margin:10px;
 		}
+		.action-box{
+			overflow:auto;
+			overflow-x:hidden;
+			overflow-y:hidden;
+			zoom:1;
+		}
+		.action-box a{
+			display:block;
+			float:left;
+			margin:10px;
+			width:45%;
+			height:80px;
+			line-height:80px;
+			font-size:30px;
+			color:#fff;
+			background:#000;
+			text-align:center;
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			-o-border-radius:10px;
+		}
+		.action-box a.right{
+			float:right;
+		}
+		.action-box a:hover{
+			background:#d4d4d4;
+			color:#000;
+		}
+		.code h2{
+			font-size:15px;
+			color:#666;
+		}
 	</style>
 </head>
 <body>
 	<div class="dataset-box">
-	  <h1 clas="t-pos-center">dataset</h1>
-	  <h2 clas="t-pos-center">The dataset is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</h2>
-	  <section class="code">
+	  <h1 clas="t-pos-center">{dataset} <a href="https://github.com/mui-lychi/dataset" target="_blank" style="margin-left:20px;font-size:16px;">Fork me on GitHub</a></h1>
+	  
+	  <h2 clas="t-pos-center">What is the <ins class="dataset">dataset</ins>?</h2>
+	  <p>The dataset is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</p>
+	  
+	  <h2 clas="t-pos-center">Usage</h2>
+<div class="code">
 	  <h2>HTML: Turn this</h2>
 	  <pre>
-&lt;section data-type="username" data-age="23" data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
+&lt;section data-type="username" 
+         data-age="23" 
+         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
          data-vip="true" data-email="null"&gt;
 &lt;/section&gt;
 	  </pre>
@@ -70,7 +112,7 @@
   age: 23,
   userAddress: {
     province: 'ZheJiang',
-	city: 'HangZhou'
+    city: 'HangZhou'
   },
   vip: true,
   email: null
@@ -80,17 +122,27 @@
 <pre>
 dataset(document.querySelectorAll('section')[0])	
 </pre>
-</section>
-<strong>Yea, so easy!<strong>
-	  <p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
-	  <h2>Compatible</h2>
-	  <ul>
-	  	<li>Chrome all</li>
-		<li>Firefox all</li>
-		<li>Safari all</li>
-		<li>Opera all</li>
-		<li>IE9+</li>
-	  </ul>
+</div>
+<strong>Yea, so easy!</strong>
+
+    <h2>Merits</h2>
+	<p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
+	<p>The <ins class="dataset">dataset</ins> solves HTML5 element.dataset dont't deal with data type problem.</p>
+	<p>The <ins class="dataset">dataset</ins> compatible with the lower level of the browser(Don't supported HTML5),such as IE6,IE7 and IE8.</p>
+	
+	<h2>Compatible</h2>
+	<ul>
+		<li>Chrome all</li>
+	<li>Firefox all</li>
+	<li>Safari all</li>
+	<li>Opera all</li>
+	<li>IE9+</li>
+	</ul>
+	
+	<div class="action-box">
+	<a href="dataset.js" title="download dataset.js" target="_blank">Download</a>
+	<a href="https://github.com/mui-lychi/dataSet" title="contribute code" target="_blank" class="right">Contribute on GitHub</a>
+	<div>
 	<div>
 </body>
 </html>
