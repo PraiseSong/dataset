@@ -1,4 +1,4 @@
-dataSet
+dataset
 =======
 
 <p>The util used to get customise data(by HTML tag&#39;s data-attribute).</p>
@@ -37,3 +37,17 @@ dataset(document.querySelectorAll('section')[0])
 </pre>
 
 <strong>Yea, so easy!</strong>
+
+<h2>Merits</h2>
+<p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
+<p>The <ins class="dataset">dataset</ins> solves HTML5 element.dataset dont't deal with data type problem.</p>
+<p>The <ins class="dataset">dataset</ins> compatible with the lower level of the browser(Don't supported HTML5),such as IE6,IE7 and IE8.</p>
+
+<h2>Compatible</h2>
+<ul>
+	<li>Chrome all</li>
+<li>Firefox all</li>
+<li>Safari all</li>
+<li>Opera all</li>
+<li>IE9+</li>
+</ul>
