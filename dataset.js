@@ -37,9 +37,12 @@ function dataset(node/*,namespace,*//*options*/){
 			if(value === 'null'){
 				setting.parseNull ? result = null : result;
 			}else if(firstChar === '{' || firstChar === '['){
-				
+				if(!JSON){
+					throw('Your browser does not support the primary JSON.Is IE?');
+				}
 				
 			    try{
+					//if you use IE,you may be modify JSON.parse
 					setting.parseObject ? result = JSON.parse(value) : '';	
 				}catch(e){
 					throw('The '+ value +' may be illegal JSON string! Happened in ' + node + '.');

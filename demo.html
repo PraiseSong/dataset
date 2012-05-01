@@ -99,11 +99,11 @@
 <div class="code">
 	  <h2>HTML: Turn this</h2>
 	  <pre>
-&lt;section data-type="username" 
+&lt;div data-type="username" 
          data-age="23" 
          data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
          data-vip="true" data-email="null"&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 	  </pre>
 	  <h2>Data: You want into this</h2>
 	  <pre>
@@ -122,8 +122,34 @@
 <pre>
 dataset(document.querySelectorAll('section')[0])	
 </pre>
+<h2>OK! Try it yourself</h2>
+<textarea id="data-source" style="width:80%;height:100px;">
+<div data-type="username" 
+         data-age="23" 
+         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
+         data-vip="true" data-email="null">
+I'm here :-)
 </div>
-<strong>Yea, so easy!</strong>
+</textarea>
+<div id="data-box">
+	You can change the content of the above text box.<br /><br />
+</div>
+<div id="data-output"></div>
+<button id="J-output">Try it</button>
+<script type="text/javascript">
+	document.getElementById('J-output').onclick = function (){
+		var dataSource = document.getElementById('data-source').value,
+		    dataBox = document.getElementById('data-box'),
+			datOutput = document.getElementById('data-output');
+		
+		dataBox.innerHTML = dataSource;
+		
+		var node = dataBox.getElementsByTagName('div')[0];
+		
+		datOutput.innerHTML = '<br />' + (JSON ? JSON.stringify(dataset(node)) : dataset(node)) + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br />';
+	};
+</script>
+</div>
 
     <h2>Merits</h2>
 	<p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
