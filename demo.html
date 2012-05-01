@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<title>dataSet util's demo</title>
+	<script type="text/javascript" src="dataset.js"></script>
+	<style type="text/css">
+		.dataset-box{
+			margin:0 auto;
+			width:900px;
+		}
+		.t-pos-center{
+			text-align:center;
+		}
+		h1{
+			font-size:55px;
+			text-align:center;
+			color:#f50;
+		}
+		h2{
+			font-size:20px;
+			font-style:normal;
+		}
+		.dataset{
+			padding:3px;
+			text-decoration:none;
+			background:rgb(226,226,226);
+			border:1px solid rgb(202,202,202);
+		}
+		a{
+			text-decoration:none;
+		}
+		ul{
+			list-style:none;
+			line-height:23px;
+		}
+		.code{
+			box-shadow:0px 0px 10px #333;
+			-webkit-box-shadow:0px 0px 10px #333;
+			-moz-box-shadow:0px 0px 10px #333;
+			-o-box-shadow:0px 0px 10px #333;
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			-o-border-radius:10px;
+			padding:10px;
+			margin:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="dataset-box">
+	  <h1 clas="t-pos-center">dataset</h1>
+	  <h2 clas="t-pos-center">The dataset is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</h2>
+	  <section class="code">
+	  <h2>HTML: Turn this</h2>
+	  <pre>
+&lt;section data-type="username" data-age="23" data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
+         data-vip="true" data-email="null"&gt;
+&lt;/section&gt;
+	  </pre>
+	  <h2>Data: You want into this</h2>
+	  <pre>
+{
+  type: 'username',
+  age: 23,
+  userAddress: {
+    province: 'ZheJiang',
+	city: 'HangZhou'
+  },
+  vip: true,
+  email: null
+}
+	  </pre>
+<h2>So you can do this</h2>
+<pre>
+dataset(document.querySelectorAll('section')[0])	
+</pre>
+</section>
+<strong>Yea, so easy!<strong>
+	  <p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
+	  <h2>Compatible</h2>
+	  <ul>
+	  	<li>Chrome all</li>
+		<li>Firefox all</li>
+		<li>Safari all</li>
+		<li>Opera all</li>
+		<li>IE9+</li>
+	  </ul>
+	<div>
+</body>
+</html>
