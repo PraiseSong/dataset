@@ -73,6 +73,25 @@ function dataset(node/*,namespace,*//*options*/){
 			  }
 			break;
 			case false:
+			  var attrs = node.attributes,
+			      name = '';
+			  
+			  function parseName(name){
+			  	var data = '';
+			  	for(j = 1,nameL = name.length;j<nameL;j++){
+					if(j !== 1){
+						data += name[j].charAt(0).toUpperCase() + name[j].slice(1).toLowerCase();
+					}else{
+						data += name[j];
+					}
+				}
+				return data;
+			  }
+			  
+			  for(i = 0,l = attrs.length;i<l;i++){
+			      name  = attrs[i]['name'].split('-');
+				  object[parseName(name)] = _convertDataType(attrs[i]['value']);
+			  }
 			break;
 		}
 		
