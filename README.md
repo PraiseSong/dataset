@@ -53,3 +53,6 @@ dataset(document.querySelectorAll('section')[0])
 <li>Windows Phone 7 IE</li>
 <li>iOS Safari all</li>
 </ul>
+
+<img src="http://qiqicartoon.com/projects/dataset/qrcode.png" alt="dataset qrcode" />
+<p>Shooting this code to open</p>
