@@ -39,7 +39,7 @@ dataset(document.querySelectorAll('section')[0])
 <strong>Yea, so easy!</strong>
 
 <h2>Merits</h2>
-<p>The reason why the <ins class="dataset">dataset</ins> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
+<p>The reason why the <cite class="dataset">dataset</cite> is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
 <p>The <ins class="dataset">dataset</ins> solves HTML5 element.dataset dont't deal with data type problem.</p>
 <p>The <ins class="dataset">dataset</ins> compatible with the lower level of the browser(Don't supported HTML5),such as IE6,IE7 and IE8.</p>
 
