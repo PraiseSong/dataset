@@ -1,12 +1,12 @@
 /**
- * @fileOverview The dataSet is a lightly util used to get customise data(by HTML tag's data-attribute)
+ * @fileOverview The dataset is a lightly util used to get customise data(by HTML tag's data-attribute)
  * @author lychi blog:http://qiqicartoon.com
  * @param {Object} node primitive DOM
  * @param {String} [namespace] the key namespace 
  * @param {Object} [options] customise the parse value options
  * @returns {Object} return the customise data
  */
-function dataSet(node/*,namespace,*//*options*/){
+function dataset(node/*,namespace,*//*options*/){
 		var namespace = arguments[1],
 		    options = arguments[2],
 			//customise the parsing options
