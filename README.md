@@ -8,17 +8,17 @@ dataSet
 
 <h2>Usage</h2>
 <h5>HTML: Turn this</h5>
-<code>
+<pre>
 <section data-type="username" 
          data-age="23" 
          data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
          data-vip="true" data-email="null"
 >
 </section>
-</code>
+</pre>
 
 <h5>Data: You want into this</h5>
-<code>
+<pre>
 {
   type: 'username',
   age: 23,
@@ -29,11 +29,11 @@ dataSet
   vip: true,
   email: null
 }
-</code>
+</pre>
 
 <h5>So you can do this</h5>
-<code>
+<pre>
 dataset(document.querySelectorAll('section')[0])	
-</code>
+</pre>
 
 <strong>Yea, so easy!</strong>
