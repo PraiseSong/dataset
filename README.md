@@ -45,9 +45,11 @@ dataset(document.querySelectorAll('section')[0])
 
 <h2>Compatible</h2>
 <ul>
-	<li>Chrome all</li>
+<li>Chrome all</li>
 <li>Firefox all</li>
 <li>Safari all</li>
 <li>Opera all</li>
 <li>IE9+</li>
+<li>Windows Phone 7 IE</li>
+<li>iOS Safari all</li>
 </ul>
