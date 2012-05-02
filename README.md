@@ -13,6 +13,8 @@ dataset
          data-age="23" 
          data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
          data-vip="true" data-email="null"
+         data-company='{"china":"[\"Alipay\",\"Taobao\"]"}'
+         data-avatars='[{"google":["img.png","img2.png"]}]'
 &gt;
 &lt;/div&gt;
 </pre>
@@ -27,13 +29,17 @@ dataset
     city: 'HangZhou'
   },
   vip: true,
-  email: null
+  email: null,
+  company:{
+     "china":["Alipay","Taobao"]
+  },
+  avatars:[{"google":["img.png","img2.png"]}]
 }
 </pre>
-
+<span style="color:#F50;">Please note that data type.</span>
 <h5>So you can do this</h5>
 <pre>
-dataset(document.querySelectorAll('section')[0])	
+dataset(document.querySelectorAll('div')[0])	
 </pre>
 
 <strong>Yea, so easy!</strong>

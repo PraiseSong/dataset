@@ -125,12 +125,17 @@
     city: 'HangZhou'
   },
   vip: true,
-  email: null
+  email: null,
+  company:{
+     "china":["Alipay","Taobao"]
+  },
+  avatars:[{"google":["img.png","img2.png"]}]
 }
 	  </pre>
+<span style="color:#F50;">Please note that data type.</span>
 <h2>So you can do this</h2>
 <pre>
-dataset(document.querySelectorAll('section')[0])	
+dataset(document.querySelectorAll('div')[0])	
 </pre>
 <h2>OK! Try it yourself</h2>
 <textarea id="data-source" style="width:80%;height:150px;">
