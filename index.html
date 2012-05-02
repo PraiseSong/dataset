@@ -152,7 +152,7 @@ I'm here :-)
 		
 		var node = dataBox.getElementsByTagName('div')[0];
 		
-		datOutput.innerHTML = '<br />' + (JSON ? JSON.stringify(dataset(node)) : dataset(node)) + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br />';
+		datOutput.innerHTML = '<br />' + (window['JSON'] ? JSON.stringify(dataset(node)) : dataset(node)) + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br />';
 	    return false;
 	};
 </script>
@@ -172,9 +172,11 @@ I'm here :-)
 		<li>Firefox all</li>
 		<li>Safari all</li>
 		<li>Opera all</li>
-		<li>IE9+</li>
+		<li>IE6+</li>
 		<li>Windows Phone 7 IE</li>
 		<li>iOS Safari all</li>
+		<li>Android OS browser all</li>
+		<li>UC browser 7.9+</li>
 	</ul>
 	
 	<div class="action-box">

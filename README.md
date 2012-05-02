@@ -45,14 +45,15 @@ dataset(document.querySelectorAll('section')[0])
 
 <h2>Compatible</h2>
 <ul>
-<li>Chrome all</li>
-<li>Firefox all</li>
-<li>Safari all</li>
-<li>Opera all</li>
-<li>IE9+</li>
-<li>Windows Phone 7 IE</li>
-<li>iOS Safari all</li>
-<li>UC browser 7.9+</li>
+	<li>Chrome all</li>
+	<li>Firefox all</li>
+	<li>Safari all</li>
+	<li>Opera all</li>
+	<li>IE6+</li>
+	<li>Windows Phone 7 IE</li>
+	<li>iOS Safari all</li>
+	<li>Android OS browser all</li>
+	<li>UC browser 7.9+</li>
 </ul>
 
 <img src="http://qiqicartoon.com/projects/dataset/qrcode.png" alt="dataset qrcode" />
