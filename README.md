@@ -3,7 +3,7 @@ dataset
 
 <p>The util used to get customise data(by HTML tag&#39;s data-attribute).</p>
 <h2 clas="t-pos-center">What is the dataset?</h2>
-<p>The dataset is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</p>
+<p>The `dataset` is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</p>
 <p>dataset's website:<a href="http://qiqicartoon.com/projects/dataset" target="_blank">http://qiqicartoon.com/projects/dataset</a></p>
 
 <h2>Usage</h2>
