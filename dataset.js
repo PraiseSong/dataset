@@ -44,6 +44,10 @@ function dataset(node/*,namespace,*//*options*/){
 			    try{
 					//if you use IE,you may be modify JSON.parse
 					setting.parseObject ? result = JSON.parse(value) : '';	
+					
+					for(var i in result){
+						result[i] = _convertDataType(result[i]);
+					}
 				}catch(e){
 					//throw('The '+ value +' may be illegal JSON string! Happened in ' + node + '.');
 				}

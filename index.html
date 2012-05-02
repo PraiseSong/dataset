@@ -107,8 +107,12 @@
 	  <pre>
 &lt;div data-type="username" 
          data-age="23" 
-         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
-         data-vip="true" data-email="null"&gt;
+         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}' 
+         data-company='{"china":"[\"Alipay\",\"Taobao\"]"}'
+         data-vip="true" 
+         data-email="null" 
+         data-avatars='[{"google":["img.png","img2.png"]}]'
+&gt;
 &lt;/div&gt;
 	  </pre>
 	  <h2>Data: You want into this</h2>
@@ -129,11 +133,15 @@
 dataset(document.querySelectorAll('section')[0])	
 </pre>
 <h2>OK! Try it yourself</h2>
-<textarea id="data-source" style="width:80%;height:100px;">
+<textarea id="data-source" style="width:80%;height:150px;">
 <div data-type="username" 
          data-age="23" 
-         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'
-         data-vip="true" data-email="null">
+         data-userAddress='{"province":"ZheJiang","city":"HangZhou"}'  
+         data-company='{"china":"[\"Alipay\",\"Taobao\"]"}'
+         data-vip="true" 
+         data-email="null"  
+         data-avatars='[{"google":["img.png","img2.png"]}]'
+>
 I'm here :-)
 </div>
 </textarea>
