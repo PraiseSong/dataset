@@ -45,7 +45,7 @@ dataset(document.querySelectorAll('div')[0])
 
 <h2>Merits</h2>
 <p>It does not depend on and other javascript frameworks.</p>
-<p>The reason why the dataset is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
+<p>The reason why the dataset is lightly, because the dataset for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
 <p>The dataset solves HTML5 element.dataset dont't deal with data type problem.<span style="color:#FF5500;">Note that, HTML5 element.dataset put all the customise data are as string return.</span></p>
 <p>The dataset compatible with the lower level of the browser(Don't supported HTML5),such as IE6,IE7 and IE8.</p>
 
