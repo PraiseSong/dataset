@@ -164,8 +164,17 @@ I'm here :-)
 		dataBox.innerHTML = dataSource;
 		
 		var node = dataBox.getElementsByTagName('div')[0];
+		    output = (window['JSON'] ? JSON.stringify(dataset(node)) : dataset(node));
 		
-		datOutput.innerHTML = '<br />' + (window['JSON'] ? JSON.stringify(dataset(node)) : dataset(node)) + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br />';
+		if(typeof output === 'object'){
+			var html = '';
+			for(i in output){
+				html += '<p>'+i+': '+output[i]+'</p>';
+			}
+			output = html;
+		}
+		
+		datOutput.innerHTML = '<br />' + output + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br /><span style="color:#F50;">Please note that the data type.</span><br /><br />';
 	    return false;
 	};
 </script>

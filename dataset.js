@@ -94,7 +94,7 @@ function dataset(node/*,namespace,*//*options*/){
 			  
 			  for(i = 0,l = attrs.length;i<l;i++){
 			      name  = attrs[i]['name'].split('-');
-				  object[parseName(name)] = _convertDataType(attrs[i]['value']);
+				  parseName(name) && parseName(name).length > 0 ? object[parseName(name)] = _convertDataType(attrs[i]['value']) : '';
 			  }
 			break;
 		}
