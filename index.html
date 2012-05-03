@@ -118,18 +118,18 @@
 	  <h2>Data: You want into this</h2>
 	  <pre>
 {
-  type: 'username',
-  age: 23,
-  userAddress: {
+  type: 'username',    {String}
+  age: 23,             {Number}
+  userAddress: {       {Object}
     province: 'ZheJiang',
     city: 'HangZhou'
   },
-  vip: true,
-  email: null,
-  company:{
+  vip: true,           {Boolean}
+  email: null,         {Object}
+  company:{            {Object}
      "china":["Alipay","Taobao"]
   },
-  avatars:[{"google":["img.png","img2.png"]}]
+  avatars:[{"google":["img.png","img2.png"]}] {Object}
 }
 	  </pre>
 <span style="color:#F50;">Please note that data type.</span>
@@ -163,18 +163,31 @@ I'm here :-)
 		
 		dataBox.innerHTML = dataSource;
 		
-		var node = dataBox.getElementsByTagName('div')[0];
-		    output = (window['JSON'] ? JSON.stringify(dataset(node)) : dataset(node));
+		var node = dataBox.getElementsByTagName('div')[0],
+		    returnData = function (data){
+				var data = data || dataset(node),
+				    html = '';
+				
+				if(typeof data === 'object'){
+					for(i in data){
+						html += '<p>' + i + ': ' + (typeof data[i]==='object' && data[i] !== null ? JSON.stringify(data[i]) : data[i]) + ' <span style="color:#f50;">(Data type: ' + typeof data[i] + ')</span></p>';
+					}
+					data = html;
+				}
+				
+				return html;
+			};
+		    output = (window['JSON'] ? '<code>'+(returnData)()+'</code>' : dataset(node));
 		
 		if(typeof output === 'object'){
 			var html = '';
 			for(i in output){
-				html += '<p>'+i+': '+output[i]+'</p>';
+				html += '<p>'+i+': '+output[i]+' <span style="color:#f50;">(Data type: '+typeof output[i]+')</span></p>';
 			}
 			output = html;
 		}
 		
-		datOutput.innerHTML = '<br />' + output + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br /><span style="color:#F50;">Please note that the data type.</span><br /><br />';
+		datOutput.innerHTML = '<br />' + output + '<br />' + '<br /><strong>Yea, so easy!</strong><br /><br />';
 	    return false;
 	};
 </script>

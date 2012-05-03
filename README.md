@@ -22,21 +22,20 @@ dataset
 <h5>Data: You want into this</h5>
 <pre>
 {
-  type: 'username',
-  age: 23,
-  userAddress: {
+  type: 'username',    {String}
+  age: 23,             {Number}
+  userAddress: {       {Object}
     province: 'ZheJiang',
     city: 'HangZhou'
   },
-  vip: true,
-  email: null,
-  company:{
+  vip: true,           {Boolean}
+  email: null,         {Object}
+  company:{            {Object}
      "china":["Alipay","Taobao"]
   },
-  avatars:[{"google":["img.png","img2.png"]}]
+  avatars:[{"google":["img.png","img2.png"]}] {Object}
 }
 </pre>
-<span style="color:#F50;">Please note that data type.</span>
 <h5>So you can do this</h5>
 <pre>
 dataset(document.querySelectorAll('div')[0])	
