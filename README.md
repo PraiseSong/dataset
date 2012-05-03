@@ -1,7 +1,7 @@
 dataset
 =======
 
-<p>The util used to get customise data(by HTML tag&#39;s data-attribute).</p>
+<p>The util used to get customise data(by HTML tag&#39;s data-attribute).It does not depend on and other javascript frameworks.</p>
 <h2 clas="t-pos-center">What is the dataset?</h2>
 <p>The dataset is a util used to get customise data(HTML tag data-attribute).It is very lightly,i hope you will enjoy it :-)</p>
 <p>dataset's website:<a href="http://qiqicartoon.com/projects/dataset" target="_blank">http://qiqicartoon.com/projects/dataset</a></p>
@@ -44,6 +44,7 @@ dataset(document.querySelectorAll('div')[0])
 <strong>Yea, so easy!</strong>
 
 <h2>Merits</h2>
+<p>It does not depend on and other javascript frameworks.</p>
 <p>The reason why the dataset is lightly, because the <ins class="dataset">dataset</ins> for HTML tag's [<a href="http://www.w3.org/TR/html5/global-attributes.html#embedding-custom-non-visible-data-with-the-data-attributes" target="_blank">data-attribute</a>] made simple encapsulate.</p>
 <p>The dataset solves HTML5 element.dataset dont't deal with data type problem.<span style="color:#FF5500;">Note that, HTML5 element.dataset put all the customise data are as string return.</span></p>
 <p>The dataset compatible with the lower level of the browser(Don't supported HTML5),such as IE6,IE7 and IE8.</p>
