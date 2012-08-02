@@ -16,8 +16,10 @@ function dataset(node/*,namespace,*//*options*/){
 				parseNull: true,
 				parseObject: true,
 				parseNumber: true,
+                parseUndefined: true,
 				//customise parse function
-				parse: undefined
+				parse: undefined,
+                deep: true // deeply parse json 
 			},
 		    elem = document.createElement('div'),
 		    support = elem.dataset ? true : false,
@@ -37,21 +39,19 @@ function dataset(node/*,namespace,*//*options*/){
 			if(value === 'null'){
 				setting.parseNull ? result = null : result;
 			}else if(firstChar === '{' || firstChar === '['){
-				if(!window['JSON']){
-					//throw('Your browser does not support the primary JSON.Is IE?');
-				}
-				
 			    try{
 					//if you use IE,you may be modify JSON.parse
 					setting.parseObject ? result = JSON.parse(value) : '';	
 					
-					for(var i in result){
-						result[i] = _convertDataType(result[i]);
-					}
+                    if (setting.deep) {
+                        for (var i in result) {
+                            result[i] = _convertDataType(result[i]);
+                        }
+                    }
 				}catch(e){
-					//throw('The '+ value +' may be illegal JSON string! Happened in ' + node + '.');
+					
 				}
-			}else if(setting.parseNull && (value === 'true' || value === 'false')){
+			}else if(setting.parseBoolean && (value === 'true' || value === 'false')){
 				 switch(value){
 				 	case 'true':
 					    result = true;
@@ -62,12 +62,15 @@ function dataset(node/*,namespace,*//*options*/){
 				 }
 			}else if(!isNaN(value*1)){
 				setting.parseNumber ? result = value*1 : result;
-			}
+			}else if(setting.parseUndefined && value.toLowerCase() === 'undefined'){
+                result = undefined;
+            }
 			
 			return result;
 		}
 		
 		switch(support){
+            // for modern browsers
 			case true:
 			  var _object = node.dataset;
 			  
@@ -82,11 +85,11 @@ function dataset(node/*,namespace,*//*options*/){
 			  
 			  function parseName(name){
 			  	var data = '';
-			  	for(j = 1,nameL = name.length;j<nameL;j++){
-					if(j !== 1){
-						data += name[j].charAt(0).toUpperCase() + name[j].slice(1).toLowerCase();
+			  	for(i = 1,nameL = name.length;i<nameL;i++){
+					if(i !== 1){
+						data += name[i].charAt(0).toUpperCase() + name[i].slice(1).toLowerCase();
 					}else{
-						data += name[j];
+						data += name[i];
 					}
 				}
 				return data;
