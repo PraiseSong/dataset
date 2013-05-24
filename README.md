@@ -62,5 +62,5 @@ dataset(document.querySelectorAll('div')[0])
 	<li>UC browser 7.9+</li>
 </ul>
 
-<img src="http://qiqicartoon.com/projects/dataset/qrcode.png" alt="dataset qrcode" />
+<img src="http://labs.cross.hk/projects/dataset/qrcode.png" alt="dataset qrcode" />
 <p>Shooting this code to open</p>
